@@ -44,6 +44,7 @@ static GtkWidget* load_main_window(const char* glade_filename)
   connect_signals(builder);
 
   GObject* main_window = gtk_builder_get_object(builder, "main_window");
+	g_object_unref(builder);
   return GTK_WIDGET(main_window);
 }
 
